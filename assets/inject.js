@@ -1,0 +1,1 @@
+window.addEventListener("message",(function(e){const{code:_}=e.data||{};if("FOX_DMB_INJECT_REQ"!==_)return;const{evt:n}=e.data;if("GET_SUPER_PROPS"===n){const _=__SENTRY__?.hub?._stack?.[0].scope?._tags?.buildNumber,n=window.GLOBAL_ENV?.RELEASE_CHANNEL;window.postMessage({...e.data,code:"FOX_DMB_INJECT_RESP",client_build_number:_,release_channel:n})}}));
